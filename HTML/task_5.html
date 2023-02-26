@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	table,
+	th,
+	td {
+		border: 1px solid black;
+	}
+</style>
+
+
+<body>
+	<h1>
+		Задача 5
+	</h1>
+	<p>
+		Вивести таблицю
+	</p>
+
+	<script>
+		// вхідні дані
+		const row = 3
+		const colum = 3
+		let counter = 1
+
+		// виводемо дані
+		// Напевно команди будує таблицб
+		// 1. виводимо таблицю
+		document.write(`<table>`)
+		// 2. виводимо рядки
+		for (let i = 1; i <= row; i++) {
+			document.write(`<tr>`)
+			// 3. виводимо колонки і заповнюємо даними
+			for (let j = 1; j <= colum; j++) {
+				document.write(`<td>${counter}</td>`)
+				counter++
+			}
+			document.write(`</tr>`)
+		}
+		document.write(`</table>`)
+
+
+
+		// document.write(`<table>`)
+		// //document.write(`<tr>`)
+		// for (let i = 1; i <= 3; i++) {
+		// 	document.write(`<td>${i}</td>`)
+		// }
+		// //document.write(`</tr>`)
+		// document.write(`<tr>`)
+		// for (let j = 4; j <= 6; j++) {
+		// 	document.write(`<td>${j}</td>`)
+		// }
+		// document.write(`<tr>`)
+		// for (let e = 7; e <= 9; e++) {
+		// 	document.write(`<td>${e}</td>`)
+		// }
+
+		// document.write(`</table>`)
+
+	</script>
+
+
+
+
+</body>
+
+</html>

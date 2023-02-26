@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	style>table,
+	th,
+	td {
+		border: 2px solid black;
+	}
+</style>
+
+<body>
+	<h1>
+		Задача 6
+	</h1>
+	<p>
+		Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком
+	</p>
+
+	<script>
+		// вхідні дані
+		let table = 3
+		let colum = 3
+		let row = 3
+
+		let counter = 1
+
+		// вивід даних
+		// 1. виводимо 3 таблиці
+		for (let i = 1; i <= table; i++) {
+			document.write(`<table>`)
+			// 2. виводимо колонки
+			for (let j = 1; j <= colum; j++) {
+				document.write(`<tr>`)
+				// 3. виводимо рядки і заповнюємо даними
+				for (let e = 1; e <= row; e++) {
+					document.write(`<td>${counter}</td>`)
+					counter++
+				}
+				document.write(`</tr>`)
+			}
+			document.write(`</table>`)
+		}
+
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 14</h1>
+	<p>
+		Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить
+		суму грошей до тих пір, поки суми не буде достатньо для оплати товарів (кожного разу користувачу
+		повідомляють, яку ще суму потрібно ввести).
+	</p>
+
+	<Script>
+		// вхідні дані
+		let totalCostThing = parseInt(prompt(`введіть суму товару, яку вам треба внести. Сума повина складати ціле число`))
+		let remainder
+		let banknote
+		let counter = 0
+
+		// рішення задачі
+		banknote = parseInt(prompt('Термінал приймає банкноти номіналом 1, 2, 5, 10, 20, 50, 100'))
+		totalCostThing = totalCostThing - banknote
+		do {
+			banknote = parseInt(prompt(`введіть решту, яка складає ${totalCostThing} термінал приймає банкноти номіналом 1, 2, 10, 20, 50, 100 `))
+			totalCostThing = totalCostThing - banknote
+			counter++
+
+		} while (totalCostThing > 0)
+		document.write('Дякую! Ви сплатили товар')
+
+
+	</Script>
+
+
+
+
+</body>
+
+</html>

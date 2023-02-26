@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 9</h1>
+	<p>
+		Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати confirm).
+	</p>
+
+	<script>
+		// вхідні дані
+		let question = confirm(`Загадайте число від 1 до 20`)
+
+		// рішення задачі
+		let firstQuestion = confirm(`Це число більше 10`)
+		if (firstQuestion) {
+			let secondQuestion = confirm(`Це число більше 15`)
+			if (secondQuestion) {
+				let min = 16
+				let max = 20
+				let i = 5
+				// рандомний оператор не коректно тут потрібно робити перебір, але я не знаяю, як це робити
+				// коли вивчемо, як робити перебір вернусь до цієї задачі
+				for (let i = 0; i <= 5; i++) {
+					let randomNumber = min + Math.floor(Math.random() * (max - min + 1))
+					foundNumber = confirm(`Я вважаю ви загадали число ${randomNumber}`)
+					if (foundNumber) {
+						alert('я зміг вгадати')
+						break
+					}
+				}
+			}
+			else {
+				let min = 11
+				let max = 15
+				let i = 5
+				for (let i = 0; i <= 5; i++) {
+					let randomNumber = min + Math.floor(Math.random() * (max - min + 1))
+					foundNumber = confirm(`Я вважаю ви загадали число ${randomNumber}`)
+					if (foundNumber) {
+						alert('я зміг вгадати')
+						break
+					}
+				}
+			}
+		}
+		else {
+			let thirdQuestion = confirm(`Це число більше 5`)
+			if (thirdQuestion) {
+				let min = 6
+				let max = 10
+				let i = 5
+				for (let i = 0; i <= 5; i++) {
+					let randomNumber = min + Math.floor(Math.random() * (max - min + 1))
+					foundNumber = confirm(`Я вважаю ви загадали число ${randomNumber}`)
+					if (foundNumber) {
+						alert('я зміг вгадати')
+						break
+					}
+				}
+			}
+			else {
+				let min = 1
+				let max = 5
+				let i = 5
+				for (let i = 0; i <= 5; i++) {
+					let randomNumber = min + Math.floor(Math.random() * (max - min + 1))
+					foundNumber = confirm(`Я вважаю ви загадали число ${randomNumber}`)
+					if (foundNumber) {
+						alert('я зміг вгадати')
+						break
+					}
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>

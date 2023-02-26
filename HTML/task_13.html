@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 13. Морський бій.</h1>
+	<p>
+		Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M.
+		Маючи К снарядів користувач намагається потопити корабель.
+	</p>
+
+	<script>
+		// Вводимо значення 
+		let n = parseInt(prompt(`введіть довжину поля від 1 до 5`))
+		let m = parseInt(prompt(`введіть ширину поля від 1 до 5`))
+		let k = parseInt(prompt(`введіть кількість пострілів`))
+
+		// Установлюємо корабель на ігровому полі
+		let min = 1
+		let max = n * m
+		let positionShip = min + Math.floor(Math.random() * (max - min + 1))
+
+		// Полювання на корабель
+		for (let i = 0; i <= k; i++) {
+			let shoot = parseInt(prompt(`введіть клітинку, в яку ви стріляєте від ${min} до ${max}`))
+			if (shoot === positionShip)
+				break
+		}
+		alert(`Корабель потоплено`)
+	</script>
+
+</body>
+
+</html>

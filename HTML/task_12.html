@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 12</h1>
+	<p>
+		Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції
+		вибирається як одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача
+		(три перших зображення 100 грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн).
+		Використати цикли і switch (для вибору зображення за номером).
+	</p>
+
+	<script>
+		// вхідні дані
+		// кількість зображення
+		const minNumber = 1
+		const maxNumber = 4
+		// Назва картинок і шлях до картинок (наскільки ця інформація тут потрібна)
+		const cherry = 1
+		const lemon = 2
+		const plum = 3
+		const watermelon = 4
+
+		// кількість слотів для фруктів
+		const i = 3
+		// сума призових за лінію
+		const cherryLine = 100
+		const lemonLine = 200
+		const plumLine = 500
+		const watermelonLine = 1000
+		// лічильник фруктів
+		let cherryCounter = 0
+		let lemonCounter = 0
+		let plumCounter = 0
+		let watermelonCounter = 0
+
+		for (let i = 0; i < 3; i++) {
+			let fruitNumber = minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1))
+			switch (fruitNumber) {
+				case 1: result = 'cherry'
+					cherryCounter++
+					break
+				case 2: result = 'lemon'
+					lemonCounter++
+					break
+				case 3: result = 'plum'
+					plumCounter++
+					break
+				case 4: result = 'watermelon'
+					watermelonCounter++
+					break
+			}
+
+			document.write(`<img src="./img/img_${fruitNumber}.jpg">`)
+			//присвоюємо виграш
+			if (cherryCounter === 3) { youWin = cherryLine }
+			if (lemonCounter === 3) { youWin = lemonLine }
+			if (plumCounter === 3) { youWin = plumLine }
+			if (watermelonCounter === 3) { youWin = watermelonLine }
+
+		}
+		//виводимо результат
+		document.write(`Ви виграли ${youWin}`)
+
+	</script>
+
+</body>
+
+</html>
